@@ -1,0 +1,8 @@
+{
+  "output": "duplicate-code",
+  "format": "javascript,tsx,typescript,scss",
+  "reporters": ["html"],
+  "ignore": ["./.vscode", "./.github", "./scripts", "jest.config.js", "*.test.*", "*.spec.*"],
+  "gitignore": true,
+  "silent": true
+}

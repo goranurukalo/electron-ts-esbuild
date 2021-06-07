@@ -1,0 +1,40 @@
+appId: "com.electrontsesbuild.app"
+productName: "electron-ts-esbuild"
+nsis:
+  perMachine: false
+  oneClick: false
+  #include: "scripts/installer.nsh"
+generateUpdatesFilesForAllChannels: true
+asar: true
+directories:
+  output: "dist"
+  buildResources: "src/main/icons"
+files:
+  - "build/**/*"
+  - "package.json"
+  - "src/static/**/*"
+publish:
+  provider: "generic"
+  url: "http://localhost:3000/"
+  channel: "latest"
+
+# check `fileAssociations` in future
+
+# targets
+win:
+  target:
+    - target: "nsis-web"
+      arch: ["x64", "ia32"]
+
+    - target: "zip"
+      arch: ["x64", "ia32"]
+linux:
+  category: "Network"
+  target:
+    - target: "AppImage"
+      arch: ["x64"]
+
+    - target: "deb"
+      arch: ["x64"]
+mac:
+  category: "public.app-category.navigation"

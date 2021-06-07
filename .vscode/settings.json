@@ -1,0 +1,15 @@
+{
+  "files.eol": "\n",
+  "editor.insertSpaces": true,
+  "editor.tabSize": 2,
+  "git.inputValidationSubjectLength": 50,
+  "eslint.validate": [
+    "javascript",
+    "typescript",
+  ],
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "files.exclude": {
+    "**/.git": true,
+    "**/node_modules": true,
+  }
+}
